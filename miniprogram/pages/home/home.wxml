@@ -1,0 +1,91 @@
+<view class="container">
+	<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltoupper="topLoad" bindscroll="scroll">
+		<view class="header">
+			<view class="searchInput">
+				<view class="section">
+					<input placeholder="输入关键字" type="text" bindinput="bindKeyInput" bindconfirm="confirmInput"/>
+				</view>
+				<view class="sug_info" wx:if="{{isShow}}">
+					<text>{{sugData}}</text>
+				</view>
+			</view>
+			<view class="location" wx:if="{{isSearch}}">
+				<image src="../../images/dw.png"> </image>
+				<text> {{locationBasic.location}}</text>
+			</view>
+			<view class="location" wx:else>
+				<image src="../../images/dw.png"> </image>
+				<text> {{weatherData.currentCity}}</text>
+			</view>
+
+			<view class="header-content" wx:if="{{isSearch}}">
+				<view class="weatherImg">
+					<image src="../../images/weather.png"> </image>
+				</view>
+				<view class="text">
+					<view class="item">
+						<image src="../../images/tem.png"> </image>
+						<text> {{temperatureData[0].tem2}}</text>~
+						<text> {{temperatureData[0].tem1}}</text>
+					</view>
+					<view class="item">
+						<image src="../../images/weatherDes.png"> </image>
+						<text> {{temperatureData[0].wea}}</text>
+					</view>
+					<view class="item">
+						<image src="../../images/PM2.5.png"> </image>
+						<text>空气质量 {{airQualityData.qlty}}</text>
+					</view>
+				</view>
+			</view>
+
+			<view class="header-content" wx:else>
+				<view class="weatherImg">
+					<image src="../../images/weather.png"> </image>
+				</view>
+				<view class="text">
+					<view class="item">
+						<image src="../../images/tem.png"> </image>
+						<text> {{weatherData.temperature}}</text>
+					</view>
+					<view class="item">
+						<image src="../../images/weatherDes.png"> </image>
+						<text> {{weatherData.weatherDesc}}</text>
+					</view>
+					<view class="item">
+						<image src="../../images/PM2.5.png"> </image>
+						<text>空气质量 {{airQualityData.qlty}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		
+		<view class="airQuality">
+			<view class="title">
+				<image src="../../images/jc.png"></image>
+				<text>空气质量</text>
+			</view>
+			<view class="content">
+				<view class="ringGraph">
+					<canvas canvas-id="ringCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+				</view>
+			</view>
+		</view>
+		<view class="temperatureAndHumidity">
+			<view class="title">
+				<image src="../../images/tem.png"></image>
+				<text>温度</text>
+			</view>
+			<view class="lineChart">
+				<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+			</view>
+		</view>
+	</scroll-view>
+
+	<view class="body-view">
+		<loading hidden="{{hidden}}" bindchange="loadingChange">
+			加载中...
+		</loading>
+	</view>
+
+</view>

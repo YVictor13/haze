@@ -1,0 +1,4 @@
+<view class="container">
+  <image src="../../images/bc.png" mode="aspectFill" class="backgorundImg"></image>
+  <button bindtap="login" class="login" hover-class="loginTransfer">Enter App</button>
+</view>
