@@ -21,4 +21,6 @@
 
 ## 动图展示
 
-![成品展示](https://github.com/YVictor13/haze/blob/master/%E6%88%90%E6%9E%9C%E5%B1%95%E7%A4%BA.mp4)
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="https://github.com/YVictor13/haze/blob/master/%E6%88%90%E6%9E%9C%E5%B1%95%E7%A4%BA.mp4" type="video/mp4">
+</video>
