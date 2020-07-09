@@ -12,3 +12,13 @@
 > 百度地图（小程序API）
 > 和天气天气质量API
 > wx-charts 插件制作动态显示天气质量数据的图表
+
+## 成品展示
+
+![展示1](https://github.com/YVictor13/haze/blob/master/%E6%B5%8B%E8%AF%951.png)
+![展示2](https://github.com/YVictor13/haze/blob/master/%E6%B5%8B%E8%AF%952.png)
+![展示3](https://github.com/YVictor13/haze/blob/master/%E6%B5%8B%E8%AF%953.png)
+
+## 动图展示
+
+![成品展示](https://github.com/YVictor13/haze/blob/master/%E6%88%90%E6%9E%9C%E5%B1%95%E7%A4%BA.mp4)
