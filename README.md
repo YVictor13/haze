@@ -23,29 +23,47 @@
 
 ## 探测数据
 ### 1、获取定位
+
 **获取定位API：**
-```java https://free-api.heweather.net/s6/weather/now?location='+location+'&key=b3c02403fbb446b497e5d05cbd8965dd ```
+
+```https://free-api.heweather.net/s6/weather/now?location='+location+'&key=b3c02403fbb446b497e5d05cbd8965dd ```
+
 **实现方案：**
+
 当进入小程序时，加载当前应用所在手机的定位，并将获取的数据缓存到小程序的缓存端，当用户在输入端输入需要查询的地址的天气情况时，获取输入地址的定位以及将获取的定位信息更新缓存到小程序端。
+
 **获取数据（以北京为例）：**
-```javahttps://free-api.heweather.net/s6/weather/now?location=%E5%8C%97%E4%BA%AC&key=b3c02403fbb446b497e5d05cbd8965dd```
+
+```https://free-api.heweather.net/s6/weather/now?location=%E5%8C%97%E4%BA%AC&key=b3c02403fbb446b497e5d05cbd8965dd```
 
 ### 2、获取天气数据
+
 **获取天气数据API：**
-```java https://free-api.heweather.net/s6/weather/now?location='+location+'&key=b3c02403fbb446b497e5d05cbd8965dd```
+
+```https://free-api.heweather.net/s6/weather/now?location='+location+'&key=b3c02403fbb446b497e5d05cbd8965dd```
+
 **实现方案：**
+
 进入小程序，加载用户所在位置的定位以及当前天气状况，并将数据缓存到用户端应用中，当用户通过输入框更换定位时，重新获取输入地址的定位以及天气状况，并将其数据更新并缓存到应用端。
 
 ### 3、获取地位地址的未来7天的温度预测
+
 **获取为了7天天气预测API：**
-```javahttps://www.tianqiapi.com/api/?version=v9&appid=17294448%20&appsecret=9gotVvIm&city='+location```
+
+```https://www.tianqiapi.com/api/?version=v9&appid=17294448%20&appsecret=9gotVvIm&city='+location```
+
 **实现方案：**
+
 通过获取到的定位地址，进入到如上的API中，从而获取得到该地的未来7天的天气预测，（这里只获取其7天的温度预测），然后将获取的数据缓存到用户应用中。当用户通过输入框输入地址时候，重新加载从定位中获取地址，重新加载数据，然后将数据更新并缓存到应用端。
 
 ### 4、获取地位地址的天气质量
+
 **获取天气质量API：**
-```java https://free-api.heweather.net/s6/air/now?location='+location+'&key=b3c02403fbb446b497e5d05cbd8965dd```
+
+```https://free-api.heweather.net/s6/air/now?location='+location+'&key=b3c02403fbb446b497e5d05cbd8965dd```
+
 **实现方案：**
+
 通过获取到的定位地址，从而将地址数据传入API，从而获取到用户所在地址的天气质量数据，从而将数据缓存到用户应用中，以此减少对API的请求，当用户通过输入端输入新的定位地址时候，将输入地址传入API，从而获取到新的天气质量数据，然后将数据缓存到用户应用中，以供后期使用。
 
 ## API调用\插件使用
@@ -56,7 +74,9 @@
 ## 成品展示
 
 ![展示1](https://github.com/YVictor13/haze/blob/master/%E6%B5%8B%E8%AF%951.png)
+
 ![展示2](https://github.com/YVictor13/haze/blob/master/%E6%B5%8B%E8%AF%952.png)
+
 ![展示3](https://github.com/YVictor13/haze/blob/master/%E6%B5%8B%E8%AF%953.png)
 
 ## 动图展示
